@@ -1,5 +1,5 @@
 cask "rewind" do
-  version "0.9335"
+  version :latest
   sha256 :no_check
 
   url "https://download.rewind.ai/Rewind.pkg"
@@ -7,12 +7,6 @@ cask "rewind" do
   desc "Record and search your screen and audio"
   homepage "https://www.rewind.ai/"
 
-  livecheck do
-    url "https://updates.rewind.ai/appcasts/main.xml"
-    strategy :sparkle, &:short_version
-  end
-
-  auto_updates true
   depends_on arch:  :arm64,
              macos: ">= :monterey"
 
